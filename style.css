@@ -1,13 +1,13 @@
 body {
     font-family: Arial, sans-serif;
     margin: 20px;
-    background-color: #f4f4f4; /* Color de fondo de la página */
-    color: #333; /* Color del texto */
+    background-color: #003A7e; /* Color de fondo de la página */
+    color: #FFFFFF; /* Color del texto */
 }
 
 form {
     margin-bottom: 20px;
-    background-color: #fff; /* Fondo blanco para el formulario */
+    background-color: #FFFFFF; /* Fondo blanco para el formulario */
     padding: 20px; /* Espaciado dentro del formulario */
     border-radius: 8px; /* Bordes redondeados */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra del formulario */
