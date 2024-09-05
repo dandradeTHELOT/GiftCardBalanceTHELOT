@@ -4,7 +4,7 @@
   "description": "Mi sitio web estático",
   "main": "index.js",
   "scripts": {
-    "build": "echo 'No build step required.'",
+    "build": "echo 'No build step required'",
     "deploy": "echo 'No deploy step required'"
   },
   "author": "",
