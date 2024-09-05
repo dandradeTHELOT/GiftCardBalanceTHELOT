@@ -17,7 +17,7 @@ app.get('/api/check-balance', async (req, res) => {
     });
     res.json(response.data);
   } catch (error) {
-    res.status(500).json({ error: 'Error al obtener el saldo' });
+    res.status(500).json({ error: 'Error al obtener el saldo.' });
   }
 });
 
