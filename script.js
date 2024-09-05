@@ -7,7 +7,7 @@ async function fetchCardBalance(cardNumber) {
     // Muestra el saldo en el frontend
     document.getElementById('balance').innerText = `Saldo: $${data.balance}`;
   } catch (error) {
-    console.error('Error al obtener el saldo:', error);
+    console.error('Error:', error);
   }
 }
 
