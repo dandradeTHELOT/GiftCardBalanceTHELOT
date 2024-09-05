@@ -1,27 +1,9 @@
-const API_TOKEN = 'afXsnPjblxcDc7G0obT3ifmIxLljtaJ4x4DzleUc00zuQNQj6Y1Iyosque1PHSYPEI36Jf6yLNbyx6fe2JiH3ZsGwUHMG4OpWXUfehFzuXIQ3OuIpnaDg4s6g2ep4D1AZ54j9Pb2ZePVaFc4Q7cGvixV6sre3RgDJThSFxlP6Zmw2uOPHA9ym0n0xiiEx4sNeAMnybhQXD1XPpqpN4YlD6OMQoUZmn3CyHa6cFZGxthwQow9G0yaeZnX8a0MyZ5'; // Reemplaza con tu token real
-
 async function fetchCardBalance(cardNumber) {
   try {
     // Envía la solicitud al backend
-    const response = await fetch(`http://8.43.115.20//WSVistaWebClient/RESTData.svc/gift-cards/balance/${cardNumber}`, {
-      headers: {
-        'Authorization': `Bearer ${API_TOKEN}`
-      }
-    });
-
-    // Verifica que la respuesta es JSON
-    if (!response.ok) {
-      throw new Error('Network response was not ok');
-    }
-
-    // Verifica el tipo de contenido
-    const contentType = response.headers.get('Content-Type');
-    if (!contentType || !contentType.includes('application/json')) {
-      throw new Error('Expected JSON, but got ' + contentType);
-    }
-
+    const response = await fetch(`/api/check-balance?cardNumber=${cardNumber}`);
     const data = await response.json();
-
+    
     // Muestra el saldo en el frontend
     document.getElementById('balance').innerText = `Balance: $${data.balance}`;
   } catch (error) {
