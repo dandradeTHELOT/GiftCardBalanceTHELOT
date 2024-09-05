@@ -5,14 +5,15 @@ async function fetchCardBalance(cardNumber) {
     const data = await response.json();
     
     // Muestra el saldo en el frontend
-    document.getElementById('balance').innerText = `Saldo: $${data.balance}`;
+    document.getElementById('balance').innerText = `Balance: $${data.balance}`;
   } catch (error) {
     console.error('Error:', error);
+    document.getElementById('balance').innerText = 'Error al obtener el saldo.';
   }
 }
 
 // Maneja el evento para verificar el saldo
-document.getElementById('check-button').addEventListener('click', () => {
-  const cardNumber = document.getElementById('card-number').value;
-  fetchCardBalance(cardNumber);
-});
+document.getElementById('balanceForm').addEventListener('submit', (event) => {
+  event.preventDefault(); // Previene el comportamiento por defecto del formulario
+  const cardNumber = document.getElementById('cardNumber').value;
+  fetchCardBalance(c
