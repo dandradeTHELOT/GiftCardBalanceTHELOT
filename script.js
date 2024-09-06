@@ -3,7 +3,7 @@ const API_TOKEN = 'afXsnPjblxcDc7G0obT3ifmIxLljtaJ4x4DzleUc00zuQNQj6Y1Iyosque1PH
 async function fetchCardBalance(cardNumber) {
   try {
     // Envía la solicitud al backend
-    const response = await fetch(`http://8.43.115.20//WSVistaWebClient/RESTData.svc/gift-cards/balance/${cardNumber}`, {
+    const response = await fetch(`https://shop.thelotent.com/WSVistaWebClient/RESTData.svc/gift-cards/balance/${cardNumber}`, {
       headers: {
         'Authorization': `Bearer ${API_TOKEN}`
       }
